@@ -1,10 +1,22 @@
-<!DOCTYPE html>
 <html>
-	<body>
+  <body>
 		<form>
-			<input type="text" name="user[first_name]">
-			<input type="text" name="user[last_name]">
-			<input type="text" name="user[email]">
+			<label for="name">Nombre:</label><br>
+			<input type="text" id="name" name=name><br>
+			<label for="last_name">Apellido:</label><br>
+            <input type="text" id="last_name" name=last_name><br>
+            <button type="submit" form="form1" value="Submit">Submit</button>
 		</form>
-	</body>
+    <hr>
+    <%=
+      if servlet_request.query['way'] == "forward"
+        "Hello"
+      else
+        "olleH"
+      end
+      "Hola%name%last_name"
+    %>
+    </hr>
+    <h4>fin</h4>
+  </body>
 </html>
