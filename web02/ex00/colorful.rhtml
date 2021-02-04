@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+       .myfont {
+                text-align:center; 
+                color:#6551be;
+                font-family: 'Comic Sans MS';
+                }
+       .myfooter {
+                text-align:center; 
+                color:#ffffff;
+                font-family: 'Comic Sans MS';
+                }
+
+        .myphoto {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 400px;
+            border-color: white;
+            border-style: dotted;
+            border-radius: 200px;
+            -webkit-border-radius: 200px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 0.3fr 1.7fr 0.5fr;
+            gap: 20px 5px;
+            grid-template-areas:
+                "header header header header"
+                "sidebar main main main"
+                "footer footer footer footer";
+        }
+
+        .header {
+            grid-area: header;
+            background: pink;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background: red;
+        }
+
+        .footer {
+            grid-area: footer;
+            background: green;
+        }
+
+        .main {
+            grid-area: main;
+            background: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="header">
+            <div class="myfont">
+                <h1>Mise en beauté</h1>
+                <h3>Je suis un sous-titre</h3>
+            </div>
+        </div>
+		<div class="sidebar">
+			<%=RUBY_VERSION%>
+		</div>
+        <div class="footer">
+            <div class="myfooter">
+                <h3>Un footer</h3>
+            </div>
+        </div>
+        <div class="main">
+            <img class="myphoto"
+                src="https://pbs.twimg.com/profile_images/3401881035/b493e9a5b4b14840ae9f3b47da49ed4f_400x400.jpeg"
+                alt="Screech">
+        </div>
+    </div>
+</body>
+
+</html>
