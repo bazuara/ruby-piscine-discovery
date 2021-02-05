@@ -5,16 +5,15 @@
 			<input type="text" id="name" name=name><br>
 			<label for="last_name">Apellido:</label><br>
             <input type="text" id="last_name" name=last_name><br>
-            <button type="submit" form="form1" value="Submit">Submit</button>
+			<button type="submit" value="Submit">Submit</button>
 		</form>
     <hr>
     <%=
-      if servlet_request.query['way'] == "forward"
-        "Hello"
-      else
-        "olleH"
-      end
-      "Hola%name%last_name"
+      name = servlet_request.query['name']
+	  last_name = servlet_request.query['last_name']
+	  unless name == nil
+		  "Hola%#{name}%#{last_name}"
+	  end
     %>
     </hr>
     <h4>fin</h4>
