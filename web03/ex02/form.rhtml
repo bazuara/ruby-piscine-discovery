@@ -22,7 +22,7 @@
 		  ["Mike" "Wasowski", "399"],
 		  ["Rolling", "Stone", "599"]
 	  ]
-	  unless name == nil
+	  unless name == nil || last_name == nil || age == nil
 		  b = 0
 		  s = 0
 		  stuff.each do |x|
@@ -33,10 +33,13 @@
 			  end
 		  end
 		  stuff << [name, last_name, age]
-		  stuff.sort_by!(&:last)
-		  p "Hola%#{name}, tienes más edad que #{b} personas y menos edad que #{s} personas\n"
+		  p "Hola#{name}, tienes más edad que #{b} personas y menos edad que #{s} personas"
 	  end
-    %>
+	%>
+	<br>
+ 	<%=
+		  p stuff.sort_by!(&:last)
+	  %>
     </hr>
     <h4>fin</h4>
   </body>
