@@ -1,3 +1,7 @@
 #!/usr/bin/env ruby
 args = ARGV
-puts args.first
+unless args.length == 0
+	puts args.first
+else
+	puts "none"
+end
