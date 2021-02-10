@@ -13,7 +13,7 @@ personas = {
 array = []
 
 personas.each do |key, value| 
-  array << key + ' ' + value
+	array << key.capitalize + ' ' + value.capitalize
 end
 
 print array
