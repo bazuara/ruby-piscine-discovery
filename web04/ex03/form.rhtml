@@ -1,0 +1,35 @@
+<html>
+	<head>
+    	<meta charset="utf-8"/>
+	</head>
+  <body>
+		<form>
+			<label for="name">Nombre:</label><br>
+			<input type="text" id="name" name=name><br>
+			<label for="last_name">Apellido:</label><br>
+            <input type="text" id="last_name" name=last_name><br>
+			<label for="line">Linea:</label><br>
+            <input type="text" id="line" name=line><br>
+			<label for="file">Archivo:</label><br>
+            <input type="text" id="file" name=file><br>
+			<button type="submit" value="Submit">Submit</button>
+		</form>
+    <hr>
+    <%=
+      name = servlet_request.query['name']
+	  last_name = servlet_request.query['last_name']
+	  line_no = servlet_request.query['line']
+      file_name = servlet_request.query['file']
+      path = "./" + file_name
+      lines = IO.readlines(path).map do |line|
+        line = name + ' ' + last_name
+      end
+      File.open(path, 'w') do |file|
+        file.puts lines
+      end
+    %>
+	<br>
+    </hr>
+    <h4>fin</h4>
+  </body>
+</html>

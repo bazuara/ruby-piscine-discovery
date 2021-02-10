@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <%= File.open("./text.txt", "a") do |a|
+    a.write("Hello again")
+  end
+  %>
+</body>
