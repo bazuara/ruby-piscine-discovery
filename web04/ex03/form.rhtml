@@ -19,14 +19,20 @@
       name = servlet_request.query['name']
 	  last_name = servlet_request.query['last_name']
 	  line_no = servlet_request.query['line']
-      file_name = servlet_request.query['file']
-      path = "./" + file_name
-      lines = IO.readlines(path).map do |line|
-        line = name + ' ' + last_name
-      end
-      File.open(path, 'w') do |file|
-        file.puts lines
-      end
+	  file_name = servlet_request.query['file']
+	  unless file_name == nil
+		  i = 0
+		  path = "./" + file_name
+		  lines = IO.readlines(path).map do |line|
+			  i += 1
+			  if i == line_no.to_f
+				  line = name + ' ' + last_name + i.to_s
+			  end
+		  end
+		  File.open(path, 'w') do |file|
+			  file.puts lines
+		  end
+	  end
     %>
 	<br>
     </hr>
