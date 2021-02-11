@@ -26,7 +26,7 @@
 		  lines = IO.readlines(path).map do |line|
 			  i += 1
 			  if i == line_no.to_f
-				  line = name + ' ' + last_name + i.to_s
+				  line = name + ' ' + last_name
 			  end
 		  end
 		  File.open(path, 'w') do |file|
