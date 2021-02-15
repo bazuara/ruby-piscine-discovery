@@ -1,0 +1,77 @@
+@font-face {
+	font-family: 'MyWebFont';
+	src: url('Neon.ttf')  format('truetype');
+}
+body{
+	background: #000;
+	color:white;
+}
+
+h6{
+	font-size:0.5em;
+	text-align: center;
+}
+	
+.area{
+	font-family: 'MyWebFont';
+	text-align:center;
+	font-size:6.5em;
+	font-weight:700;
+}
+
+.game-container {
+	display: grid;
+	grid-template-columns: repeat(5, auto);
+	width: 500px;
+	margin:80px auto;
+	}
+
+.cell {
+	width: 100px;
+	height: 100px;
+	box-shadow: 0 0 0 1px  blue;
+	border: 1px solid blue;
+	cursor: pointer;
+	line-height: 100px;
+	font-size: 60px;
+	}
+
+a {
+	transition: color 0.8s linear 0.2s;
+}
+
+a:hover {
+	color: rgb(0, 225, 0);
+	text-shadow:0px 0px 10px rgb(123, 184, 132),
+	0px 0px 15px rgb(123, 184, 131);
+}
+.green{
+	color:rgb(0, 225, 0);
+	text-shadow:0px 0px 10px rgb(123, 184, 132),
+	0px 0px 15px rgb(123, 184, 131);
+}
+.yellow{
+	color:rgb(255, 247, 0);
+	text-shadow:0px 0px 10px rgb(184, 184, 123),
+	0px 0px 15px rgb(184, 184, 123);
+}
+.red{
+	color:red;
+	text-shadow:0px 0px 10px rgb(184, 123, 123),
+	0px 0px 15px rgb(184, 123, 123);
+}
+.blue{
+	color:rgb(0, 30, 255);
+	text-shadow:0px 0px 10px rgb(83, 83, 139),
+	0px 0px 15px rgb(39, 39, 74);
+}
+.purple{
+	color:rgb(79, 0, 106);
+	text-shadow:0px 0px 10px rgb(146, 123, 184),
+	0px 0px 15px rgb(143, 123, 184);
+}
+.white{
+	color:rgb(255, 255, 255);
+	text-shadow:0px 0px 10px rgb(145, 145, 145),
+	0px 0px 15px rgb(126, 126, 126);
+}

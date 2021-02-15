@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Noughts and crosses</title>
+	<link rel="stylesheet" href="styles.css?v=<%=rand(150)%>">
+<style>
+	section {
+		text-align: center;
+	}
+	.game-container {
+		display: grid;
+			grid-template-columns: repeat(3, auto);
+			width: 306px;
+			margin: 50px auto;
+	}
+</style>
+</head>
+<body>
+	<div>
+		<div class="area green game-container">
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+		</div>
+		<h2 class="game-notification"></h2>
+		<h6><a class="area blue game-restart">Restart Game</a></h6>
+	</div>
+	<script src="index.js"></script>
+</body>
+</html>
